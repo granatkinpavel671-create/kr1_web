@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка и контакты</title>
+</head>
+<body>
+    <!-- Навигация -->
+    <ul>
+        <li><a href="index.html" target="_self"><img src="./images/logo.png" alt="Первый портфель" height="30px"></a></li>
+        <li><a href="index.html" target="_self">Главная</a></li>
+        <li><a href="page1.html" target="_self">С чего начать</a></li>
+        <li><a href="page1.html#razdel2" target="_self">Виды инструментов (закладка на странице «С чего начать»)</a></li>
+        <li><a href="page2.html" target="_self">Инструменты в картинках</a></li>
+        <li><a href="page3.html" target="_self">Сравнение инструментов</a></li>
+        <li><a href="page4.html" target="_self"><b>Заявка и контакты</b></a></li>
+        <li><a href="passport_dom.html" target="_self">DOM_JS. Считываем информацию из DOM</a></li>
+        <li><a href="passport_click.html" target="_self">Изменяем кириллицу на латиницу по клику</a></li>
+        <li><a href="task.html" target="_self">Решение алгоритмической задачи</a></li>
+        <li><a href="https://www.moex.com" target="_blank">Московская биржа (внешний сайт)</a></li>
+    </ul>
+    <hr color="#1F7A4C" size="2">
+
+    <!-- Заголовок страницы и закладки -->
+    <a id="top"><h3 align="center">Заявка и контакты</h3></a>
+    <ul>
+        <li><a href="#razdel1" target="_self">Раздел 1. Контактные данные</a></li>
+        <li><a href="#razdel2" target="_self">Раздел 2. Заявка на учебный портфель</a></li>
+    </ul>
+
+    <!-- Раздел 1: форма с контактными данными -->
+    <h4><a id="razdel1">Раздел 1. Контактные данные</a></h4>
+    <form action="https://httpbin.org/post" method="post" id="ContactForm" name="ContactForm" target="_blank">
+        <p>Фамилия: <input type="text" name="last_name" size="20" value="Гранаткин"></p>
+        <p>Имя: <input type="text" name="first_name" size="20" value="Павел"></p>
+        <p>Группа: <input type="text" name="group" size="10" value="БЭК255"></p>
+        <p>Мобильный телефон: <input type="text" name="phone" size="15" value="+79000000000"></p>
+        <p>Электронная почта: <input type="text" name="email" size="30" value="pagranatkin@edu.hse.ru"></p>
+        <p>Дата отправки: <input type="date" name="send_date" value="2026-10-21"></p>
+        <p>
+            <input type="reset" name="Reset" value="Обновить">
+            <input type="submit" name="submit" value="Отправить">
+        </p>
+    </form>
+    <p><a href="#top" target="_self">К началу страницы</a></p>
+
+    <!-- Раздел 2: тематическая форма -->
+    <h4><a id="razdel2">Раздел 2. Заявка на учебный портфель</a></h4>
+    <p>Заполните анкету, и мы подберём учебный портфель под вашу сумму и отношение к риску.</p>
+    <form action="https://httpbin.org/post" method="post" id="PortfolioForm" name="PortfolioForm" target="_blank">
+        <p>Имя инвестора: <input type="text" name="investor_name" size="20" value="Павел"></p>
+        <p>Стартовая сумма, руб.: <input type="number" name="start_sum" value="10000"></p>
+        <p>Ежемесячное пополнение, руб.: <input type="number" name="monthly_topup" value="2000"></p>
+        <p>Срок инвестирования, лет: <input type="number" name="term_years" value="3"></p>
+        <p>Отношение к риску:
+            <input type="radio" name="risk_profile" value="conservative" checked>Осторожное
+            <input type="radio" name="risk_profile" value="moderate">Умеренное
+            <input type="radio" name="risk_profile" value="aggressive">Смелое
+        </p>
+        <p>Какие инструменты рассмотреть:
+            <input type="checkbox" name="instruments" value="ofz" checked>ОФЗ
+            <input type="checkbox" name="instruments" value="corp_bonds" checked>Корпоративные облигации
+            <input type="checkbox" name="instruments" value="shares">Акции
+            <input type="checkbox" name="instruments" value="funds">Фонды
+        </p>
+        <p>Тип счёта:
+            <select name="account_type">
+                <option value="broker">Брокерский счёт</option>
+                <option value="iis">ИИС</option>
+            </select>
+        </p>
+        <p>Дата начала: <input type="date" name="start_date" value="2026-11-01"></p>
+        <p>Кодовое слово для связи: <input type="password" name="code_word" size="12" value="portfel"></p>
+        <p>Комментарий:
+            <br><textarea cols="60" rows="3" name="comment">Хочу копить на магистратуру</textarea>
+        </p>
+        <input type="hidden" name="page_id" value="4">
+        <input type="hidden" name="form_type" value="portfolio_request">
+        <p>
+            <input type="reset" name="Reset" value="Обновить">
+            <input type="submit" name="submit" value="Отправить">
+        </p>
+    </form>
+    <p><a href="#top" target="_self">К началу страницы</a></p>
+
+    <hr color="#1F7A4C" size="1">
+    <p align="center"><i>Гранаткин Павел, БЭК255, 2026</i></p>
+</body>
+</html>
