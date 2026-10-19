@@ -3,10 +3,8 @@ function verify() {
     let sum = parseFloat(elementSum.value);
     console.log("sum", sum);
 
-    // Проверяем, что сумма больше нуля и целая
     if (sum > 0) {
         if (sum == parseInt(sum)) {
-            // Все номиналы чётные, поэтому нечётную сумму разменять нельзя
             if (sum % 2 == 0) {
                 let rest = sum;
                 let n500 = parseInt(rest / 500);
@@ -39,6 +37,7 @@ function verify() {
 }
 
 function send() {
+    verify();
     if (check) {
         document.getElementById("UserEnter").submit();
     } else {
